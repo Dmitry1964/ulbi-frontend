@@ -1,0 +1,13 @@
+export type BuildMode = 'production' | 'development';
+
+export interface BuildPaths {
+    entryPath: string;
+    outputPath: string;
+    htmlPath: string;
+}
+
+export interface BuildOptions {
+    paths: BuildPaths;
+    mode: BuildMode;
+    isDev?: boolean;
+}
