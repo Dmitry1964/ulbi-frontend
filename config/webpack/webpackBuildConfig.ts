@@ -3,10 +3,11 @@ import { BuildOptions } from './types/config-types';
 import { webpackPlugins } from './webpackPlugins';
 import { webpackLoaders } from './webpackLoaders';
 import { webpackResolvers } from './webpackResolvers';
+import { webpackDevServer } from './webpackDevServer';
 
 export const webpackBuildConfig = (options: BuildOptions): webpack.Configuration => {
 
-    const { paths, mode } = options
+    const { paths, mode, isDev} = options
     return {
         mode,
         entry: paths.entryPath,
@@ -20,5 +21,7 @@ export const webpackBuildConfig = (options: BuildOptions): webpack.Configuration
             rules: webpackLoaders(),
         },
         resolve: webpackResolvers(),
+        devtool: isDev ? "inline-source-map" : undefined,
+        devServer: isDev ? webpackDevServer(options) : undefined,
     }
 }
