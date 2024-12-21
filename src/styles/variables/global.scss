@@ -1,0 +1,21 @@
+$font-first: Consolas, "Arial", sans-serif;
+
+// font-m
+$font-size-m: 16px;
+$font-line-m: 24px;
+@mixin font-m {
+    font-size: $font-first;
+    font-size: $font-size-m;
+    line-height: $font-line-m;
+    font-family: $font-first;
+}
+
+// font-l
+$font-size-m: 16px;
+$font-line-m: 24px;
+@mixin font-m {
+    font-size: $font-first;
+    font-size: $font-size-m;
+    line-height: $font-line-m;
+    font-family: $font-first;
+}

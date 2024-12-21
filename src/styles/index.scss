@@ -1,0 +1,9 @@
+@import './reset.scss';
+@import './variables/global.scss';
+@import './themes-style/light.scss';
+@import './themes-style/dark.scss';
+
+.app {
+    @include font-m;
+    height: 100vw;
+}
