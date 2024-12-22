@@ -9,6 +9,10 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
     // "typeRoots": ["./src/global.d.ts", "node_modules/@types"]
   },
   "ts-node": {

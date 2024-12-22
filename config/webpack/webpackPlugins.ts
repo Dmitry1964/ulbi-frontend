@@ -12,8 +12,8 @@ export const webpackPlugins = (options: BuildOptions): webpack.WebpackPluginInst
         }),
         new webpack.ProgressPlugin(),
         new MiniCssExtractPlugin({
-            filename: "styles/[name].[contenthash:8].css",
-            chunkFilename: "styles/[name].[contenthash:8].css"
+            filename: "style/[name].[contenthash:8].css",
+            chunkFilename: "style/[name].[contenthash:8].css"
         })
     ]
 }
