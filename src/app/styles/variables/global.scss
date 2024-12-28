@@ -1,10 +1,30 @@
-$font-first: Consolas, "Arial", sans-serif;
+@import 'app/styles/fonts.scss';
+
+// @font-face {
+//     font-family: "Golos";
+//     font-weight: 400;
+//     font-style: normal;
+
+//     font-display: swap;
+//     src: url("app/fonts/GolosText-Regular.woff2") format("woff2");
+// }
+
+// @font-face {
+//     font-family: "Golos";
+//     font-weight: 700;
+//     font-style: normal;
+
+//     font-display: swap;
+//     src: url("app/fonts/GolosText-Bold.woff2") format("woff2");
+// }
+
+$font-first: "Golos", "Arial", sans-serif;
 
 // font-m
 $font-size-m: 16px;
 $font-line-m: 24px;
 @mixin font-m {
-    font-size: $font-first;
+    font-family: $font-first;
     font-size: $font-size-m;
     line-height: $font-line-m;
     font-family: $font-first;
@@ -14,7 +34,7 @@ $font-line-m: 24px;
 $font-size-m: 16px;
 $font-line-m: 24px;
 @mixin font-m {
-    font-size: $font-first;
+    font-family: $font-first;
     font-size: $font-size-m;
     line-height: $font-line-m;
     font-family: $font-first;
