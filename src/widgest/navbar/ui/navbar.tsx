@@ -1,8 +1,9 @@
 import { FC } from "react"
-import { Link, useLocation } from "react-router-dom"
+import {useLocation } from "react-router-dom"
 import { classNames } from "shared/lib/class-names/class-names"
 import cn from './navbar.module.scss'
 import { AppLink } from "shared/ui/app-link/app-link"
+import { ThemeSwitcher } from "widgest/theme-switcher"
 
 type NavbarProps = {
     classNamesProps?: string
@@ -10,12 +11,11 @@ type NavbarProps = {
 
 export const Navbar: FC<NavbarProps> = ({ classNamesProps }) => {
 
-    const {pathname} = useLocation();
-    console.log(pathname);
-    
+    const { pathname } = useLocation();
+
     return (
         <div className={classNames(cn.navbar, [cn[classNamesProps]], {})}>
-            <div>image</div>
+            <ThemeSwitcher />
             <div className={classNames(cn.navbar__links, [], {})}>
                 <AppLink
                     to="/"

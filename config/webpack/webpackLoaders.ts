@@ -4,6 +4,11 @@ import { BuildOptions } from './types/config-types';
 
 export const webpackLoaders = ({isDev}: BuildOptions): webpack.RuleSetRule[] => {
 
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ['@svgr/webpack'],
+  }
+
   const typeScriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
@@ -28,6 +33,7 @@ export const webpackLoaders = ({isDev}: BuildOptions): webpack.RuleSetRule[] => 
   }
 
   return [
+    svgLoader,
     typeScriptLoader,
     styleLoader,
   ]

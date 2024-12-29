@@ -13,12 +13,11 @@ import { Container } from "shared/container/container";
 
 export const App = () => {
 
-    const { theme, toggleTheme } = useTheme();
+    const { theme} = useTheme();
 
     return (
             <div className={classNames('app', [theme], {})}>
                 <Navbar classNamesProps={theme} />
-                <button onClick={toggleTheme}>Toggle</button>
                 <AppRouter />
             </div>
     )
