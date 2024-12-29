@@ -1,8 +1,8 @@
-$bg-color: #e6e7eb;
-$primary-color: #0a1b33;
-$secondary-color: rgb(20, 70, 66);
+@import 'app/styles/variables/global.scss';
 
 .app.light {
-    background-color: $bg-color;
-    color: $primary-color;
+    background-color: $bg-color-light;
+    color: $primary-color-light;
+    transition: background-color 0.35s ease-in;
 }
+

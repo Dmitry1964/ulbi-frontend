@@ -1,8 +1,7 @@
-$bg-color: #0c1d55;
-$primary-color: #d3dae4;
-$secondary-color: #148b42;
+@import 'app/styles/variables/global.scss';
 
 .app.dark {
-    background-color: $bg-color;
-    color: $primary-color;
+    background-color: $bg-color-dark;
+    color: $primary-color-dark;
+    transition: background-color 0.35s ease-in;
 }

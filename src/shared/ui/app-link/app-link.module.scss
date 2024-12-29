@@ -1,0 +1,23 @@
+
+@import 'app/styles/variables/global.scss';
+
+.link {
+    font-size: 2rem;
+    transition: color 0.3s ease-out;
+}
+
+.light {
+    color: $primary-color-dark;
+}
+
+.dark {
+    color: $primary-color-light
+}
+
+.light.isActive {
+    border-bottom: 2px solid $primary-color-dark;
+}
+
+.dark.isActive {
+    border-bottom: 2px solid $primary-color-light;
+}

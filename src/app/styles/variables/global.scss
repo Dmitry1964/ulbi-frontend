@@ -20,6 +20,8 @@
 
 $font-first: "Golos", "Arial", sans-serif;
 
+$navbar-height: 50px;
+
 // font-m
 $font-size-m: 16px;
 $font-line-m: 24px;
@@ -39,3 +41,16 @@ $font-line-m: 24px;
     line-height: $font-line-m;
     font-family: $font-first;
 }
+
+// colors
+
+// light theme
+$bg-color-light: #e6e7eb;
+$primary-color-light: #0a1b33;
+$secondary-color-light: #144642;
+
+// dark theme
+$bg-color-dark: #0c1d55;
+$primary-color-dark: #d3dae4;
+$secondary-color-dark: #148b42;
+
