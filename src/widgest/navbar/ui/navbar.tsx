@@ -13,6 +13,7 @@ export const Navbar: FC<NavbarProps> = ({ classNamesProps }) => {
 
     const { pathname } = useLocation();
 
+
     return (
         <div className={classNames(cn.navbar, [cn[classNamesProps]], {})}>
             <ThemeSwitcher />
