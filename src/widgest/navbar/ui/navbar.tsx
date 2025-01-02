@@ -4,6 +4,7 @@ import { classNames } from "shared/lib/class-names/class-names"
 import cn from './navbar.module.scss'
 import { AppLink } from "shared/ui/app-link/app-link"
 import { ThemeSwitcher } from "widgest/theme-switcher"
+import { useTranslation } from "react-i18next"
 
 type NavbarProps = {
     classNamesProps?: string
@@ -12,21 +13,21 @@ type NavbarProps = {
 export const Navbar: FC<NavbarProps> = ({ classNamesProps }) => {
 
     const { pathname } = useLocation();
+    const {t} = useTranslation()
 
 
     return (
         <div className={classNames(cn.navbar, [cn[classNamesProps]], {})}>
-            <ThemeSwitcher />
             <div className={classNames(cn.navbar__links, [], {})}>
                 <AppLink
                     to="/"
                     classNamesProps={classNamesProps}
                     path={pathname}
                 >
-                    Главная
+                    {t("Главная")}
                 </AppLink>
                 <AppLink to={'/about'} classNamesProps={classNamesProps} path={pathname}>
-                    О сайте
+                    {t("О сайте")}
                 </AppLink>
             </div>
         </div>

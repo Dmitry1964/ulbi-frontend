@@ -1,9 +1,10 @@
 @import 'app/styles/variables/global.scss';
+@import 'app/styles/mixins.scss';
 
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     height: $navbar-height;
@@ -17,9 +18,9 @@
 }
 
 .light {
-    background-color: $bg-color-dark;
+    @include theme-light-invert;
 }
 
 .dark {
-    background-color: $bg-color-light;
+    @include theme-dark-invert;
 }

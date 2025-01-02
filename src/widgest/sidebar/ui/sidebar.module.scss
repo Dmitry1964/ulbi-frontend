@@ -1,0 +1,26 @@
+@import 'app/styles/variables/global.scss';
+@import 'app/styles/mixins.scss';
+
+.sidebar {
+    width: 300px;
+    height: calc(100vh - $navbar-height);
+    position: relative;
+}
+
+.sidebar__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    
+}
+
+.light {
+    @include theme-light-invert;
+}
+
+.dark {
+    @include theme-dark-invert;
+}

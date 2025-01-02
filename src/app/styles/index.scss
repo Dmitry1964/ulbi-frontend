@@ -8,5 +8,8 @@
 
 .app {
     @include font-m;
-    height: 100vw;
+}
+
+.app__wrapper {
+    display: flex;
 }

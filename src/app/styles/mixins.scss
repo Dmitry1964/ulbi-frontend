@@ -1,0 +1,7 @@
+@mixin theme-light-invert {
+    background-color: $bg-color-light-invert;
+}
+
+@mixin theme-dark-invert {
+    background-color: $bg-color-dark-invert;
+}
