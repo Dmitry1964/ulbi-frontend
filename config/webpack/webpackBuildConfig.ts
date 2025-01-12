@@ -7,21 +7,21 @@ import { webpackDevServer } from './webpackDevServer';
 
 export const webpackBuildConfig = (options: BuildOptions): webpack.Configuration => {
 
-    const { paths, mode, isDev} = options
-    return {
-        mode,
-        entry: paths.entryPath,
-        output: {
-            filename: "[name].[contenthash].js",
-            path: paths.outputPath,
-            clean: true,
-        },
-        plugins: webpackPlugins(options),
-        module: {
-            rules: webpackLoaders(options),
-        },
-        resolve: webpackResolvers(options),
-        devtool: isDev ? "inline-source-map" : undefined,
-        devServer: isDev ? webpackDevServer(options) : undefined,
-    }
+  const { paths, mode, isDev} = options
+  return {
+    mode,
+    entry: paths.entryPath,
+    output: {
+      filename: "[name].[contenthash].js",
+      path: paths.outputPath,
+      clean: true,
+    },
+    plugins: webpackPlugins(options),
+    module: {
+      rules: webpackLoaders(options),
+    },
+    resolve: webpackResolvers(options),
+    devtool: isDev ? "inline-source-map" : undefined,
+    devServer: isDev ? webpackDevServer(options) : undefined,
+  }
 }
